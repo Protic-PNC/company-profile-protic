@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <!-- <link rel="stylesheet" href="css/navbar.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/new-style.css">
+</head>
+<body class="bg-[#d9d9d9]">
+    <!-- <nav class="flex items-center justify-between bg-c6 h-[100px] px-10"> -->
+    <nav class="flex-wrap md:flex-nowrap flex justify-between items-center fixed w-full  md:px-0 top-0 text-white bg-c6 h-[80px] md:h-[90px] z-50">
+
+        <!-- logo section -->
+        <div class="flex w-full max-w-[50%] md:w-[300px] lg:w-[370px] xl:w-[550px]">
+            <div class="flex items-center bg-c2 w-[200px] xl:w-[400px] 2xl:w-[450px] h-[80px] md:h-[90px] justify-around">
+                <div class="py-3 px-5">
+                    <img src="img/Logo.png" alt="Logo Protic" class="w-[60px] md:w-[70px] h-[60px] md:h-[70px]">
+                </div>
+            </div>
+            <div class="hidden md:block w-0 h-0 border-t-[90px] border-r-[90px] border-t-c2 border-r-transparent"></div>
+        </div>
+
+        <!-- <div class="z-10">
+            <img src="img/Logo.png" alt="Logo Protic" class="w-[50px] md:w-[70px] h-[50px] md:h-[70px]">
+        </div> -->
+
+        <div id="hamburger" class="md:hidden z-10 mr-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </div>
+
+        <!-- <ul id="menu-list" class="absolute md:relative w-3/4 sm:w-1/2 md:w-auto hidden md:flex flex-col md:flex-row-reverse items-start md:items-center h-screen md:h-full right-0 p-5 md:p-0 top-full md:top-0 md:gap-7 lg:gap-[4.375rem] bg-c6 font-monserrat font-semibold text-base"> -->
+        <ul id="menu-list" class="absolute md:relative w-3/4 sm:w-1/2 md:w-auto hidden md:flex flex-col md:flex-row-reverse items-start md:items-center md:justify-between h-screen md:h-full right-0 p-5 md:p-0 top-full md:top-0 bg-c6 font-monserrat font-semibold text-base">
+
+            <!-- search box -->
+            <div id="search-box" class="flex items-center border border-c3 rounded px-4 w-full md:w-[232px] h-[40px] 2xl:mr-52 mb-5 md:mb-0">
+                <button class="text-white hover:text-c3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l4.9 4.9a1 1 0 01-1.42 1.42l-4.9-4.9zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <input type="text" placeholder="cari" class="bg-transparent text-white placeholder-[#FFFFFFBF] focus:outline-none ml-6 font-monserrat font-semibold text-base"/>
+            </div>
+
+            <div class="md:flex md:gap-7 lg:gap-[4.375rem]">
+                <li class="text-center"><a href="index.html" class="block w-full py-4">Home</a></li>
+                <li class="text-center"><a href="about.html" class="block w-full py-4">About Us</a></li>
+
+                <!-- dropdown divisi -->
+                <li class="text-center ">
+                    <div class="w-full md:relative">
+                        <button id="btn-divisi" class="py-4 w-full flex items-center justify-center mx-auto gap-2">
+                            Divisi
+                            <!-- arrow decoration -->
+                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                        <!-- list divisi -->
+                        <ul id="menu-divisi" class="hidden md:absolute bg-c6 md:bg-white md:w-36 md:rounded-md md:font-medium md:text-sm md:text-black md:right-0 md:px-[0.875rem] md:mt-2">
+
+                            <!-- polygon decoration -->
+                            <div class="hidden md:block ml-16 -mt-2">
+                                <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.28922 0.655624C6.88846 -0.163773 8.11154 -0.163774 8.71077 0.655623L13.9827 7.86455C14.7075 8.85556 13.9997 10.25 12.772 10.25H2.22804C1.0003 10.25 0.292525 8.85556 1.01726 7.86455L6.28922 0.655624Z" fill="white"/>
+                                </svg>
+                            </div>
+
+                            <li class="text-center md:text-start"><a href="bph.html" class="block w-full py-4">BPH</a></li> <hr class="hidden md:block">
+                            <li class="text-center md:text-start"><a href="technical.html" class="block w-full py-4">Technical</a></li> <hr class="hidden md:block">
+                            <li class="text-center md:text-start"><a href="non_technical.html" class="block w-full py-4">Non-Technical</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="text-center"><a href="prestasi_kmipn.html" class="block w-full py-4">Prestasi</a></li>
+                <li class="text-center"><a href="sj_web_basic.html" class="block w-full py-4">Program</a></li>
+                <li class="text-center"><a href="contact.html" class="block w-full py-4">Contact Us</a></li>
+            </div>
+        </ul>
+
+
+    </nav>
+
+        
+    <main class="mt-40">
+        <div id="overlay"></div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus est in voluptatum nesciunt itaque. Voluptatibus ratione illum ducimus impedit minus itaque officia asperiores, maxime quis fugiat odit natus rerum ipsam quaerat corporis reprehenderit deleniti perspiciatis deserunt nostrum. Asperiores, rerum voluptatum!
+    </main>
+    <!-- <script src="js/navbar.js"></script> -->
+    <script src="js/coba.js"></script>
+</body>
+</html>
